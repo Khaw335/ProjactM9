@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Favorite</title>
+</head>
+
+<style>
+    body {
+        background-color: #f3f3f3;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                    fill="currentColor" class="bi bi-tree-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5z" />
+                </svg></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">PLANT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-danger mx-2" type="submit"> <svg xmlns="http://www.w3.org/2000/svg"
+                            width="40" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                            <path
+                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                        </svg></button>
+                    <button class="btn btn-outline-success" type="submit"> <svg xmlns="http://www.w3.org/2000/svg"
+                            width="40" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    </div>
+    <div class="container">
+        <h2 class="header-top header-bottom">My favorite</h2>
+
+        <div class="d-flex flex-row flex-wrap justify-content-center width-100 mx-5">
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/001.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Astrophytum Nudam7</h5>
+                        </b>
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+                        <p class="card-text">ชื่อต้นไม้ : แอสโตรไฟตัม</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <b>
+                                <p> รหัสสินค้า : 6858 1000 THB</p>
+                            </b>
+                        </div>
+
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/002.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Mammillaria Plumosa</h5>
+                        </b>
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+                        <p class="card-text">ชื่อต้นไม้ : แมมมิลลาเรีย</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <b>
+                                <p>
+                                    รหัสสินค้า : 6710 1000 THB</p>
+                            </b>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center ">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/003.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Astrophytum Nudam</h5>
+                        </b>
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+                        <p class="card-text">ชื่อต้นไม้ : แอสโตรไฟตัม</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <b>
+                                <p> รหัสสินค้า : 6716 1000 THB</p>
+                            </b>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/004.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Astrophytum Nudam Variegated</h5>
+                        </b>
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+                        <p class="card-text">ชื่อต้นไม้ : แอสโตรไฟตัม</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <p> รหัสสินค้า : 6824 1000 THB</p>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/005.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Gymnocalycium Montrose Transformer</h5>
+                        </b>
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+                        <p class="card-text">ชื่อต้นไม้ : ยิมโนคาไลเซียม</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <b>
+                                <p> รหัสสินค้า : 5026 1000 THB</p>
+                            </b>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/006.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Gymnocalycium Montrose Transformer</h5>
+                        </b>
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+                        <p class="card-text">ชื่อต้นไม้ : ยิมโนคาไลเซียม</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <b>
+                                <p> รหัสสินค้า : 1168 1000 THB</p>
+                            </b>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center ">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/007.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Melocactus</h5>
+                        </b>
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+                        <p class="card-text">ชื่อต้นไม้ : เมโลแคคตัส</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <b>
+                                <p>รหัสสินค้า : 2681 1000 THB</p>
+                            </b>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/008.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Mammillaria Schiedeana</h5>
+                        </b>
+
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+
+                        <p class="card-text">
+                            ชื่อต้นไม้ : แมมมิลลาเรีย</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <b>
+                                <p>รหัสสินค้า : 6876 1000 THB</p>
+                            </b>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center ">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/009.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Gymnocalycium mihanovichii</h5>
+                        </b>
+
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+                        <p class="card-text">ชื่อต้นไม้ : ยิมโนคาไลเซียม</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <b>
+                                <p>รหัสสินค้า : 6860 1000 THB</p>
+                            </b>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/010.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Mammillaria</h5>
+                        </b>
+
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+                        <p class="card-text">ชื่อต้นไม้ : แมมมิลลาเรีย</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <b>
+                                <p> รหัสสินค้า : 6867 1000 THB</p>
+                            </b>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/011.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Echinopsis</h5>
+                        </b>
+
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+                        <p class="card-text">ชื่อต้นไม้ : อิชินอปซิส</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <b>
+                                <p>รหัสสินค้า : 6865 1000 THB</p>
+                            </b>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/012.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Mammillaria carmenae cristata</h5>
+                        </b>
+
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+                        <p class="card-text">ชื่อต้นไม้ : แมมมิลลาเรีย</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <b>
+                                <p> รหัสสินค้า : 6873
+                                    1000 THB</p>
+                            </b>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center ">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/013.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Gymnocalycium mihanovichii</h5>
+                        </b>
+
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+                        <p class="card-text">ชื่อต้นไม้ : ยิมโนคาไลเซียม</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <b>
+                                <p> รหัสสินค้า : 6861 1000 THB</p>
+                            </b>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center ">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/014.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Mammillaria</h5>
+                        </b>
+
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+                        <p class="card-text">ชื่อต้นไม้ : แมมมิลลาเรีย</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <b>
+                                <p> รหัสสินค้า : 5644 1000 THB</p>
+                            </b>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center ">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/015.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Mammillaria แมมคริสมาส</h5>
+                        </b>
+
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+                        <p class="card-text">
+                            ชื่อต้นไม้ : แมมมิลลาเรีย</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <b>
+                                <p>
+                                    รหัสสินค้า : 5182 1000 THB</p>
+                            </b>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/016.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Mammillaria Schediana</h5>
+                        </b>
+
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+                        <p class="card-text">ชื่อต้นไม้ : แมมมิลลาเรีย</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <b>
+                                <p> ชื่อต้นไม้ : แมมมิลลาเรีย 1000 THB</p>
+                            </b>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/017.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Mammillaria Microthele</h5>
+                        </b>
+
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+                        <p class="card-text">ชื่อต้นไม้ : แมมมิลลาเรีย</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <b>
+                                <p> รหัสสินค้า : 5803 1000 THB</p>
+                            </b>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center ">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="Originals/020.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>
+                            <h5 class="card-title">Mammillaria Hahdiana</h5>
+                        </b>
+
+                        <i class="fa fa-heart" style="font-size:24px;color: grey;"></i></i>
+                        <i class="fa fa-heart" style="font-size:24px; color: grey;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color: salmon;"></i>
+                        <i class="fa fa-heart" style="font-size:24px;color:salmon"></i>
+                        <br>
+                        <p class="card-text">ชื่อต้นไม้ : แมมมิลลาเรีย</p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <b>
+                                <p>รหัสสินค้า : 6484 1000 THB</p>
+                            </b>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center ">
+                            <div class="p-2">
+                                <a href="#" class="btn btn-success">Add</a>
+                            </div>
+                            <div class="p-2">
+                                <a href="#" class="btn btn-danger">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="text-center text-lg-start text-muted">
+            <div class="text-center p-3" id="footer-left">
+                Copyright © Plant Shop
+            </div>
+            <div class="text-center p-3" id="footer-right">
+                Privacy & Cookie | NPY | PLANT
+            </div>
+        </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>
